@@ -62,7 +62,7 @@ You keep the work you create in this lab. Later exercises and later labs build o
 
 A support team needs a shared mailbox they can work from, a team with a restricted workstream for a subset of members, and a meeting policy that makes Copilot behavior predictable. You build all three and verify the participant's experience, not just the configuration.
 
-**Roles used:** **Exchange Administrator**, **User Administrator**, **Teams Administrator**, and **SharePoint Administrator**.
+**Roles used:** Exchange Administrator, User Administrator, Teams Administrator, and SharePoint Administrator.
 
 ### Task 1: Create a shared mailbox and delegate Full Access and Send As
 
@@ -70,11 +70,11 @@ Full Access lets a delegate open and manage a shared mailbox, but not send from 
 
 1. On **SEA-DEV1**, open the **Exchange admin center** at `https://admin.cloud.microsoft/exchange#/`.
 
-1. Select **Recipients** > **Mailboxes**, then select **Add a shared mailbox**.
+1. Select **Recipients** > **Mailboxes**, then select **+ Add a shared mailbox**.
 
 1. Enter the following, then select **Create**:
    - **Display name:** `Training Support`
-   - **Email address:** `training-support`, with your assigned `*.onmicrosoft.com` domain
+   - **Email address:** `training-support`, with your assigned `.onmicrosoft.com` domain
 
 1. When the mailbox is created, close the pane. In the **Mailboxes** list, select **Training Support**, then select the **Delegation** tab.
 
@@ -90,14 +90,14 @@ Full Access lets a delegate open and manage a shared mailbox, but not send from 
 
 1. Select the message body. Select the **Options** tab, select **Show fields**, then select **Show From**.
 
-1. Select **From**, select **Other email address...**, type `training-support@<yourtenant>.onmicrosoft.com`, then select **Use this address**.
+1. Select **From: DiegoS@<yourtenant>.onmicrosoft.com**, select **Other email address...**, type `training-support@<yourtenant>.onmicrosoft.com`, then select **Use this address: training-support@<yourtenant>.onmicrosoft.com**.
 
    > [!NOTE]
    > A newly created shared mailbox might not resolve by name yet, so type the full address.
 
 1. In **To**, enter **Joni Sherman**. In **Subject**, enter `Send As test`, then select **Send**.
 
-1. Select your profile picture, then select **Open another mailbox**. Enter `training-support@<yourtenant>.onmicrosoft.com`, then select **Open**. Confirm that the shared mailbox opens in a new tab. This confirms **Full Access**.
+1. Select your profile picture, then select **Open another mailbox**. Enter and select `training-support@<yourtenant>.onmicrosoft.com`, then select **Open**. Confirm that the shared mailbox opens in a new tab. This confirms **Full Access**.
 
    > [!NOTE]
    > Outlook can take time to add a shared mailbox to the folder list automatically. If it doesn't appear there yet, that doesn't mean Full Access failed. Opening it with **Open another mailbox** confirms the permission.
@@ -116,26 +116,28 @@ A private channel gives a subset of a team its own workstream and its own ShareP
 
 1. Switch to **SEA-DEV1**. Open **Microsoft Teams** at `https://teams.cloud.microsoft`. If a **Get to know Teams** dialog appears, select **Get Started**.
 
-1. Select **Chat**. Next to the new chat icon, select the **New items** dropdown arrow, then select **New team**.
+1. If prompted to stay signed in, select **No**.
+
+1. Select **Chat**. Next to the **New message** icon, select the **New items** dropdown arrow, then select **New team**.
 
 1. Enter the following, then select **Create**:
    - **Team name:** `DealRoom`
-   - **Team type:** **Private** (default)
+   - **Team type:** Private
    - **First channel name:** `General`
 
 1. In **Add members to DealRoom**, add **Megan Bowen**, **Alex Wilber**, **Isaiah Langer**, **Lynne Robbins**, and **Joni Sherman**.
 
 1. Next to **Megan Bowen** and **Alex Wilber**, change **Member** to **Owner**, then select **Add**. Two business owners keep the team accountable if one is unavailable.
 
-1. Next to **DealRoom**, select **More options (...)** > **Add channel**.
+1. Next to **DealRoom**, select **More team options (...)** > **Add channel**.
 
-1. Enter the channel name `Negotiation`. In **Choose a channel type**, select **Private**, then select **Create**.
+1. Enter `Negotiation` for the **Channel name**. In **Choose a channel type**, select **Private**, then select **Create**.
 
-1. In **Add members to the Negotiation channel**, add **Isaiah Langer** and **Lynne Robbins**, then select **Add**. Don't add Joni Sherman.
+1. In **Add members to the Negotiation channel**, add **Isaiah Langer** and **Lynne Robbins**, then select **Add**. Don't add **Joni Sherman**.
 
-1. Next to **Negotiation**, select **More options (...)** > **Manage channel**. On the **Members** tab, expand **Members and guests**. Next to **Isaiah Langer**, change **Channel role** to **Owner**.
+1. Next to **Negotiation**, select **More channel options (...)** > **Manage channel**. On the **Members** tab, expand **Members and guests**. Next to **Isaiah Langer**, change **Channel role** to **Owner**.
 
-1. In the **Microsoft 365 admin center**, select **Show all** > **SharePoint**. In the SharePoint admin center, select **Sites** > **Active sites**.
+1. In the **Microsoft 365 admin center**, select **Show all** > **SharePoint**. In the **SharePoint admin center**, select **Sites** > **Active sites**.
 
 1. Search for `DealRoom`. In the **Channel sites** column for **DealRoom**, select **1 site**. Record the channel site name, **DealRoom-Negotiation**, and its type, **Private channel**.
 
@@ -143,6 +145,8 @@ A private channel gives a subset of a team its own workstream and its own ShareP
    > A private channel uses a dedicated SharePoint site, separate from the parent team site. Files in the channel are stored there, not in the team site.
 
 1. Switch to **SEA-DEV2**. In Microsoft Edge, open an InPrivate window, go to `https://teams.cloud.microsoft`, and sign in as `IsaiahL@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster. If a **Get to know Teams** dialog appears, select **Get Started**.
+
+1. If prompted to stay signed in, select **No**.
 
 1. Under **DealRoom**, confirm that the **Negotiation** channel appears with a lock icon. Open it and select the **Shared** tab to confirm that Isaiah can reach its files.
 
