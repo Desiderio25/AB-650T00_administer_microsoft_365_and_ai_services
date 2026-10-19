@@ -68,6 +68,8 @@ Before your organization rolls out Microsoft 365 more widely, you set the tenant
 
 1. In the **Microsoft 365 admin center** at `https://admin.cloud.microsoft`, select **Show all** > **Settings** > **Org settings**.
 
+1. If prompted to set up multifactor authentication (MFA), select **Set up now** and follow the on-screen instructions to register an authentication method before continuing.
+
 1. Select the **Organization profile** tab, then select **Organization information**.
 
 1. In the **Organization information** pane, set **Technical contact** to your administrator account (for example, `admin@<yourtenant>.onmicrosoft.com`), then select **Save**.
