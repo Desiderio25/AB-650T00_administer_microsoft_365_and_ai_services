@@ -162,6 +162,8 @@ What Copilot can do in a Teams meeting depends on the meeting policy assigned to
 
 1. Switch to **SEA-DEV1**. Open the **Teams admin center** at `https://admin.teams.microsoft.com`.
 
+1. Sign in with your administrator account.
+
 1. Select **Meetings** > **Meeting policies**, then select **+ Add**.
 
 1. Name the policy `DealRoom-Copilot`.
