@@ -295,16 +295,18 @@ Users report that Copilot and Teams "are down." Before you escalate, you determi
 
 ### Task 2: Run the network connectivity test from two clients
 
-1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Health** > **Network connectivity**.
+1. On **SEA-DEV1**, in the **Microsoft 365 admin center**, select **Health** > **Network connectivity**.
 
    > [!NOTE]
    > An empty **Overview** means the tenant doesn't have enough location telemetry yet. It doesn't mean the network is healthy.
 
-1. Select **Network connectivity test**. The Microsoft 365 network connectivity test opens in a new tab.
+1. Select **Network connectivity test**. The **Microsoft 365 network connectivity test** opens in a new tab.
 
-1. Select **Sign in** and sign in with your administrator account so that the results are saved.
+1. If prompted, select **Sign in** and sign in with your administrator account so that the results are saved.
 
 1. Select **Run test**. When Microsoft Edge asks to use your location, select **Allow**.
+
+1. In the **Let Windows and apps access your location?** dialog, select **Yes**.
 
 1. When the report opens and `Connectivity.<id>.exe` finishes downloading, press **Ctrl+J**, and then select **Open file** under the downloaded file.
 
