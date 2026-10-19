@@ -327,9 +327,9 @@ Users report that Copilot and Teams "are down." Before you escalate, you determi
 
 ### Task 3: Inspect the Microsoft 365 Backup setup prerequisites
 
-1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Show all** > **Settings** > **Microsoft 365 Backup**.
+1. On **SEA-DEV1**, in the **Microsoft 365 admin center**, select **Show all** > **Settings** > **Microsoft 365 Backup**.
 
-1. Review the three setup steps: **Things to know**, **Connect a billing policy**, and **Start backing up**.
+1. Review the three setup steps: **Things to know before you start**, **Connect a billing policy**, and **Start backing up your data**.
 
 1. Under step 2, select **Go to Pay-as-you-go**.
 
