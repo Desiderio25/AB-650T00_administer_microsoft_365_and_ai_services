@@ -200,7 +200,7 @@ What Copilot can do in a Teams meeting depends on the meeting policy assigned to
 
 Copilot grounds its answers only on content that a user's permissions already allow them to open, so an excessive permission grant is also a Copilot exposure. You create a governed finance site, then create a separate finance review site where an internal group has more access than it should. You prove the exposure, remove only the excessive grant, and choose a discovery control that limits broad discovery without changing who can open the content.
 
-**Roles used:** **SharePoint Administrator**, as the owner of the sites you create.
+**Roles used:** SharePoint Administrator, as the owner of the sites you create.
 
 ### Task 1: Create a finance site and add the sample file
 
@@ -208,19 +208,19 @@ Copilot grounds its answers only on content that a user's permissions already al
 
 1. Select **Documents** > **A365Lab** > **documents** > **finance**. Select **Contoso_Finance_Policy.docx**, then select **Download**. The file is saved to your **Downloads** folder.
 
-1. In the SharePoint admin center, select **Sites** > **Active sites**, then select **+ Create**.
+1. In the **SharePoint admin center**, select **Sites** > **Active sites**, then select **+ Create**.
 
 1. Select **Team site** > **Standard team** > **Use template**.
 
 1. In **Site name**, enter `LAB2-Finance`. The group email address and site address fill in automatically.
 
-1. In **Group owner**, select your administrator account, then select **Next**.
+1. In **Group owner**, enter and select your administrator account, then select **Next**.
 
-1. Leave **Privacy settings** set to **Private** and leave the default language, then select **Create site**. You can't change the site language later.
+1. Leave **Privacy settings** set to **Private - only members can access this site**, leave the default language and the default time zone, then select **Create site**. You can't change the site language later.
 
 1. In **Add site owners and members**, select **Finish**. If a survey appears, close it.
 
-1. Go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance`. Select **+ Create or upload** > **Files upload**, select **Contoso_Finance_Policy.docx** from your **Downloads** folder, then select **Open**.
+1. Go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance`. Select **Documents**, select **+ Create or upload** > **Files upload**, select **Contoso_Finance_Policy.docx** from your **Downloads** folder, then select **Open**.
 
 **You have successfully created a private finance site and added the sample file.**
 
@@ -234,27 +234,35 @@ You create a review site with two SharePoint groups. **AB650-Review-Finance** is
 
 1. Select **Communication site** > **Standard communication** > **Use template**.
 
-1. In **Site name**, enter `AB650-Finance-Review`. In **Site owner**, select your administrator account, then select **Next**. Select **Create site**. The site appears in **Active sites** after a short delay.
+1. In **Site name**, enter `AB650-Finance-Review`. In **Site owner**, enter and select your administrator account, then select **Next**. Select **Create site**. The site appears in **Active sites** after a short delay.
 
 1. Go to `https://<yourtenant>.sharepoint.com/sites/AB650-Finance-Review`. If a dialog appears, select **Maybe later**.
 
-1. Select **+ Create or upload** > **Files upload**, select **Contoso_Finance_Policy.docx** from your **Downloads** folder, then select **Open**.
+1. Select **Documents**, select **+ Create or upload** > **Files upload**, select **Contoso_Finance_Policy.docx** from your **Downloads** folder, then select **Open**.
 
 1. Select **Settings** (gear icon) > **Site permissions** > **Advanced permissions settings**.
 
-1. Select **Create Group**. In **Name**, enter `AB650-Review-Finance`. Under **Give Group Permission to this Site**, select **Read**, then select **Create**.
+1. Select **Create Group**. In **Name**, enter `AB650-Review-Finance`. Under **Choose the permission level group members get on this site: https://<yourtenant>.sharepoint.com/sites/AB650-Finance-Review**, select **Read - Can view pages and list items and download documents**, then select **Create**.
 
-1. On the group page, select **New**. Enter **Patti Fernandez**, then select **Share**.
+1. On the group page, select **New**. Enter and select **Patti Fernandez**, then select **Share**.
 
 1. Go back to **Advanced permissions settings**, and repeat the previous two steps to create `AB650-Review-Internal` with **Read** permission. Add **Diego Siciliani** and **Nestor Wilke**.
 
-1. Switch to **SEA-DEV2**. In Microsoft Edge, open an InPrivate window, go to `https://<yourtenant>.sharepoint.com/sites/AB650-Finance-Review/Shared%20Documents`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster. If a **Please sign in** dialog appears, select **Not now**.
+1. Switch to **SEA-DEV2**. In Microsoft Edge, open an InPrivate window, go to `https://<yourtenant>`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster. 
 
+1. If prompted, respond to the sign-in dialogs as follows:
+   - On **Stay signed in?**, select **No**.
+   - On **Please sign in**, select **Not now**.
+   
 1. Open **Contoso_Finance_Policy.docx**, and confirm that it opens.
 
-1. Close the InPrivate window, and repeat the previous two steps as `DiegoS@<yourtenant>.onmicrosoft.com`. Confirm that Diego can also open the document. This is the exposure.
+1. Close the InPrivate window, and repeat the previous three steps as `DiegoS@<yourtenant>.onmicrosoft.com`. Confirm that Diego can also open the document. This is the exposure.
 
-1. Close the InPrivate window. Switch to **SEA-DEV1**. On the **Advanced permissions settings** page, select **Check Permissions**. Enter **Diego Siciliani**, then select **Check Now**. Confirm that Diego has **Read** through the **AB650-Review-Internal** group.
+1. Close the InPrivate window and then switch to **SEA-DEV1**. 
+
+1. On the **Advanced permissions settings** page, select **Check Permissions**. Enter and select **Diego Siciliani**, then select **Check Now**. Confirm that Diego has **Read** through the **AB650-Review-Internal** group.
+
+1. Close the **AB650-Finance-Review: Check Permissions** dialog.
 
 1. Select the checkbox next to **AB650-Review-Internal**, select **Remove User Permissions**, then select **OK**.
 
@@ -285,15 +293,20 @@ Use this requirement to choose a control:
    > [!NOTE]
    > RCD requires SharePoint Advanced Management and Microsoft 365 Copilot. It doesn't revoke permissions or remove content from the index, and the change takes time to propagate. To block a group from opening content, correct the permission or use RAC instead.
 
-1. Switch to **SEA-DEV2**. Open an InPrivate window, go to `https://m365.cloud.microsoft`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster. If a welcome dialog appears, close it.
+1. Switch to **SEA-DEV2**. Open an InPrivate window, go to `https://m365.cloud.microsoft`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
+
+1. If prompted to stay signed in, select **No**.
+
+1. If a welcome dialog appears, close it.
 
 1. Select **New chat**, enter `Summarize Contoso_Finance_Policy from the AB650-Finance-Review site, and tell me which site each source is stored on.`, and press **Enter**. Record whether Copilot returns the document from **AB650-Finance-Review**. After RCD propagates, it doesn't. If it still does, record the time, because propagation can take a while on new sites.
 
 1. In the same window, go to `https://<yourtenant>.sharepoint.com/sites/AB650-Finance-Review/Shared%20Documents`. If a **Please sign in** dialog appears, select **Not now**. Select **Contoso_Finance_Policy.docx** to open it in Word for the web.
 
-1. Select **Copilot** at the lower right of the document. In **Message Copilot**, enter `Summarize this document in three bullets.`, and press **Enter**. Confirm that Copilot summarizes the policy and cites **Contoso_Finance_Policy**.
+1. Select **Copilot** at the lower right of the document. In **Copilot** pane, enter `Summarize this document in three bullets.`, and press **Enter**. Confirm that Copilot summarizes the policy and cites **Contoso_Finance_Policy**.
 
-    > **Note:** If the **Summary** card at the top of the document shows an error, ignore it and use the Copilot pane.
+   > [!NOTE]
+   > If the **Summary** card at the top of the document shows an error, ignore it and use the Copilot pane.
 
 1. Close the InPrivate window. Record two separate observations for the review site:
    - **Direct access:** Patti can still open the document and use Copilot on it.
