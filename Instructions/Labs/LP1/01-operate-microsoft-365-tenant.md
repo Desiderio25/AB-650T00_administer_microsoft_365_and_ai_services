@@ -66,9 +66,11 @@ Before your organization rolls out Microsoft 365 more widely, you set the tenant
 
 ### Task 1: Set the organization profile
 
-1. In the **Microsoft 365 admin center** at `https://admin.cloud.microsoft`, select **Show all** > **Settings** > **Org settings**.
+1. Go to the **Microsoft 365 admin center** at `https://admin.cloud.microsoft.
 
-1. If prompted to set up multifactor authentication (MFA), select **Set up now** and follow the on-screen instructions to register an authentication method before continuing.
+1. If prompted to set up multifactor authentication (MFA), select **Set up now** and follow the on-screen instructions to register an authentication method before continuing. After completing the setup, continue with the sign-in process and authenticate when prompted.
+
+1. Select **Show all** > **Settings** > **Org settings**.
 
 1. Select the **Organization profile** tab, then select **Organization information**.
 
@@ -83,7 +85,7 @@ Before your organization rolls out Microsoft 365 more widely, you set the tenant
    - **Last name:** `Deyoung`
    - **Address line 1:** `One Microsoft Way`
    - **City:** `Redmond`
-   - **State:** **Washington**
+   - **State:** Washington
    - **Zip:** `98052`
    - **Email:** Your administrator account
 
@@ -95,7 +97,7 @@ Before your organization rolls out Microsoft 365 more widely, you set the tenant
 
 1. Go back to **Settings** > **Org settings** > **Organization profile**, then select **Custom themes**.
 
-1. Select **Default theme**, then select the **Colors** tab.
+1. Select **+ Add theme**, then select the **Colors** tab.
 
 1. In **Navigation bar color**, enter `#0F6CBD`. Confirm that the contrast message doesn't report a contrast problem.
 
@@ -163,7 +165,7 @@ Your organization wants to license new hires through group membership instead of
    - **Last name:** `Vance`
    - **Display name:** `Adele Vance`
    - **Username:** `AdeleV`
-   - **Domains:** Select your `*.onmicrosoft.com` domain
+   - **Domains:** Select your `.onmicrosoft.com` domain
    - **Password settings:** Leave **Automatically create a password** selected
 
 1. Select **Next**.
@@ -187,12 +189,12 @@ Your organization wants to license new hires through group membership instead of
 
 ### Task 2: Create a direct and a nested licensing group
 
-1. In the **Microsoft Entra admin center** at `https://entra.microsoft.com`, select **Groups** > **All groups**.
+1. Go to the **Microsoft Entra admin center** at `https://entra.microsoft.com` and select **Groups** > **All groups**.
 
 1. Select **New group** and enter the following:
-   - **Group type:** **Security**
+   - **Group type:** Security
    - **Group name:** `LAB1-Licensing-Direct`
-   - **Membership type:** **Assigned**
+   - **Membership type:** Assigned
 
 1. Under **Members**, select **No members selected**, search for and select **Adele Vance**, and then select **Select**.
 
@@ -200,7 +202,7 @@ Your organization wants to license new hires through group membership instead of
 
 1. Repeat steps 2–4 to create a second group:
    - **Group name:** `LAB1-Licensing-Nested`
-   - **Member:** **Grady Archie**
+   - **Member:** Grady Archie
 
 1. In **All groups**, open **LAB1-Licensing-Direct** and select **Members**.
 
@@ -242,7 +244,7 @@ Grady is a member of **LAB1-Licensing-Nested**, which is itself a member of **LA
 
 1. Select **Billing** > **Licenses** > **Microsoft 365 E7 (No Teams)**.
 
-1. Select **Assign licenses**, search for and select `LAB1-Licensing-Nested`, and then select **Assign licenses**.
+1. Select **Assign licenses**. In **Search for a name or email address**, search for and select `LAB1-Licensing-Nested`, and then select **Assign licenses**.
 
 1. Close the confirmation pane. Confirm that both **LAB1-Licensing-Direct** and **LAB1-Licensing-Nested** are listed, and that the assigned count increased by **1**.
 
@@ -275,7 +277,7 @@ Users report that Copilot and Teams "are down." Before you escalate, you determi
 
 ### Task 1: Review service health and configure an email notification
 
-1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Health** > **Service health**.
+1. On **SEA-DEV1**, in the **Microsoft 365 admin center**, select **Health** > **Service health**.
 
 1. On the **Overview** tab, review the service list and any active issues.
 
