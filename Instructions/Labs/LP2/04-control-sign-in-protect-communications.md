@@ -352,9 +352,9 @@ Defender for Office 365 policies can target only mail-enabled security groups or
 
 1. In **Name**, enter `Finance Mail`, then select **Next**.
 
-1. Add your administrator account as the owner, then select **Next**.
+1. Select **+ Assign owners**, search for `MOD` and press **Enter**, select **MOD Administrator**, select **Add (1)**, and then select **Next**.
 
-1. Add **Patti Fernandez** and **Nestor Wilke** as members, then select **Next**.
+1. Select **Add members**. Search for and select **Patti Fernandez**, then search for and select **Nestor Wilke**. Select **Add (2)**, then select **Next**.
 
 1. In the group email address, enter `financemail`. Leave the option to allow external senders cleared, then select **Next**.
 
