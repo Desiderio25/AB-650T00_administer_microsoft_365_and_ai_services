@@ -65,13 +65,13 @@ You keep the work you create in this lab. Later exercises and later labs build o
 
 Finance transaction references need consistent classification before the organization can protect them. You create a custom SIT for a fictional transaction-reference format, test it against matching and near-miss samples, create an encrypted sensitivity label for item content, and publish the label to a test group.
 
-**Roles used:** **Compliance Administrator** or **Information Protection Administrator**, and **Groups Administrator**.
+**Roles used:** Compliance Administrator or Information Protection Administrator, and Groups Administrator.
 
 ### Task 1: Create a test group for label publishing
 
 A separate test group gives you a safe target for the label policy and the label's encryption permissions. Label policies and encryption permissions need a group with an email address, so you create a mail-enabled security group. Patti Fernandez represents a finance user who should receive the label.
 
-1. On **SEA-DEV1**, open the **Microsoft 365 admin center** at `https://admin.microsoft.com`.
+1. On **SEA-DEV1**, open the **Microsoft 365 admin center** at `https://admin.cloud.microsoft`.
 
 1. Select **Teams & groups** > **Active teams & groups**, then select the **Security groups** tab.
 
@@ -81,7 +81,7 @@ A separate test group gives you a safe target for the label policy and the label
    - **Name:** `LAB5-Information-Protection-Test`
    - **Description:** `Lab 5 test group for Purview label publishing and encryption`
 
-1. Select **Assign owners**, search for `MOD` and press **Enter**, select **MOD Administrator**, select **Add**, and then select **Next**.
+1. Select **+ Assign owners**, search for `MOD` and press **Enter**, select **MOD Administrator**, select **Add (1)**, and then select **Next**.
 
 1. Select **Add members**. Search for and select **Patti Fernandez**, then search for and select **Nestor Wilke**. Select **Add (2)**, then select **Next**.
 
@@ -117,27 +117,29 @@ The sample pattern is a `WG-` prefix, eight digits, a hyphen, and a check letter
 
 1. In Microsoft Edge, open the **Microsoft Purview portal** at `https://purview.microsoft.com`.
 
-1. Select **Solutions** > **Information Protection**. If a welcome dialog appears, select **Get started**, and close any tour that follows.
+1. If a welcome dialog appears, select **Get started**, and close any tour that follows.
 
-1. Under **Classifiers**, select **Sensitive info types**, then select **Create sensitive info type**.
+1. Select **Solutions** > **Information Protection**.
 
-1. On the **Name** page, enter the following, then select **Next**:
+1. Under **Classifiers**, select **Sensitive info types (classic)**, then select **+ Create sensitive info type**.
+
+1. On the **Name your sensitive info type** page, enter the following, then select **Next**:
    - **Name:** `Woodgrove transaction reference`
    - **Description:** `Matches fictional Woodgrove transaction references in the WG-########-L format.`
 
-1. On **Define patterns for this sensitive info type**, select **Create pattern**.
+1. On **Define patterns for this sensitive info type**, select **+ Create pattern**.
 
-1. In **New pattern**, leave **Confidence level** set to **High confidence**, then select **Add primary element** > **Regular expression**.
+1. In **New pattern** pane, leave **Confidence level** set to **High confidence**, then select **+ Add primary element** > **Regular expression**.
 
-1. In **Add a regular expression**, enter the following, leave **String match** selected, and then select **Done**:
+1. In **Add a regular expression** pane, leave **String match** selected, enter the following values, and then select **Done**:
    - **ID:** `WoodgroveTransactionReference`
    - **Regular expression:** `\b([Ww][Gg]-[0-9]{8}-[A-Za-z])\b`
 
-1. In **New pattern**, select **Create**, then select **Next**.
+1. In **New pattern** pane, select **Create**, then select **Next**.
 
 1. On **Choose the recommended confidence level to show in compliance policies**, leave **High confidence level** selected, then select **Next**.
 
-1. On **Review settings and finish**, select **Create**. When **Your sensitive info type is created** appears, select **Done**.
+1. On **Review settings and finish** page, select **Create**. When **Your sensitive info type is created** appears, select **Done**.
 
 1. In **Sensitive info types**, search for `Woodgrove`, select **Woodgrove transaction reference**, and then select **Test** in the details pane.
 
@@ -159,9 +161,9 @@ A sensitivity label can protect the file itself, not only the site or folder whe
 
 1. In the **Microsoft Purview portal**, select **Solutions** > **Information Protection** > **Sensitivity labels**.
 
-1. Select **Create** > **Label**.
+1. Select **+ Create** > **Label**.
 
-1. On **Provide basic details for this label**, enter the following, leave **Label priority** set to **Highest**, and then select **Next**:
+1. On **Provide basic details for this label**,leave **Label priority** set to **Highest**, enter the following values, and then select **Next**:
    - **Name:** `Woodgrove Confidential - Transaction Records`
    - **Display name:** `Woodgrove Confidential - Transaction Records`
    - **Description for users:** `Use for sample transaction-reference files that require finance-only access.`
@@ -173,7 +175,7 @@ A sensitivity label can protect the file itself, not only the site or folder whe
 
 1. On **Access control**, keep **Configure access control settings** and **Assign permissions now** selected. Keep **User access to content expires** set to **Never** and **Allow offline access** set to **Always**.
 
-1. Select **Assign permissions**, then select **Add users or groups**.
+1. Select **Assign permissions**, then select **+ Add users or groups**.
 
 1. Search for `LAB5`, select **LAB5-Information-Protection-Test**, and then select **Add**.
 
@@ -211,7 +213,7 @@ Sensitivity labels aren't available to users until you publish them in a label p
 
 1. On **Publish to users and groups**, select **Edit** for **Exchange email**.
 
-1. Select **Include only specific**, then select **Add**.
+1. Select **Include only specific**, then select **+ Add**.
 
 1. Search for `LAB5`, press **Enter**, select **LAB5-Information-Protection-Test**, and then select **Add (1)**.
 
@@ -233,11 +235,11 @@ Sensitivity labels aren't available to users until you publish them in a label p
 
 1. On **New policy created**, select **Done**.
 
-1. In **Label policies**, confirm that **Finance - Woodgrove transaction labeling** appears with the highest **Priority** number in the list and a **Policy sync status** of **Sync in progress** or **Sync completed**.
+1. In **Label policies**, confirm that **Finance - Woodgrove transaction labeling** appears with the highest **Priority** number in the list and that **Policy sync status** shows **Sync in progress** or **Sync completed**.
 
    When more than one label policy applies to a user, the policy with the highest priority number provides that user's default label and policy settings.
 
-1. On **SEA-DEV2**, open an InPrivate window, go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance/Shared%20Documents`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
+1. On **SEA-DEV2**, open an InPrivate window, go to `https://<yourtenant>.`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
 
 1. Select **Contoso_Finance_Policy.docx** to open it in Word for the web.
 
