@@ -116,8 +116,6 @@ A private channel gives a subset of a team its own workstream and its own ShareP
 
 1. Switch to **SEA-DEV1**. Open **Microsoft Teams** at `https://teams.cloud.microsoft`. If a **Get to know Teams** dialog appears, select **Get Started**.
 
-1. If prompted to stay signed in, select **No**.
-
 1. Select **Chat**. Next to the **New message** icon, select the **New items** dropdown arrow, then select **New team**.
 
 1. Enter the following, then select **Create**:
@@ -145,8 +143,6 @@ A private channel gives a subset of a team its own workstream and its own ShareP
    > A private channel uses a dedicated SharePoint site, separate from the parent team site. Files in the channel are stored there, not in the team site.
 
 1. Switch to **SEA-DEV2**. In Microsoft Edge, open an InPrivate window, go to `https://teams.cloud.microsoft`, and sign in as `IsaiahL@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster. If a **Get to know Teams** dialog appears, select **Get Started**.
-
-1. If prompted to stay signed in, select **No**.
 
 1. Under **DealRoom**, confirm that the **Negotiation** channel appears with a lock icon. Open it and select the **Shared** tab to confirm that Isaiah can reach its files.
 
@@ -294,8 +290,6 @@ Use this requirement to choose a control:
    > RCD requires SharePoint Advanced Management and Microsoft 365 Copilot. It doesn't revoke permissions or remove content from the index, and the change takes time to propagate. To block a group from opening content, correct the permission or use RAC instead.
 
 1. Switch to **SEA-DEV2**. Open an InPrivate window, go to `https://m365.cloud.microsoft`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
-
-1. If prompted to stay signed in, select **No**.
 
 1. If a welcome dialog appears, close it.
 
