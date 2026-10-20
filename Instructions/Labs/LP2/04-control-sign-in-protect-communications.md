@@ -67,7 +67,7 @@ You keep the work you create in this lab. Later exercises and later labs build o
 
 The security team wants passkeys and self-service password reset available only to a small engineering test group. You create the group, scope passkeys and SSPR to it, register Lynne Robbins for SSPR, compare Lynne with Alex Wilber in the registration report, and run a real reset as Lynne.
 
-**Roles used:** **Authentication Policy Administrator** and **Privileged Authentication Administrator** or equivalent administrator access to manage user authentication methods.
+**Roles used:** Authentication Policy Administrator and Privileged Authentication Administrator or equivalent administrator access to manage user authentication methods.
 
 ### Task 1: Create the Engineering group and scope passkeys
 
@@ -78,9 +78,9 @@ Each authentication method has its own targeting. Scoping passkeys to Engineerin
 1. Select **Entra ID** > **Groups** > **All groups**, then select **New group**.
 
 1. Enter the following values:
-   - **Group type:** **Security**
+   - **Group type:** Security
    - **Group name:** `Engineering`
-   - **Membership type:** **Assigned**
+   - **Membership type:** Assigned
 
 1. Under **Members**, select **No members selected**. Search for and select **Lynne Robbins** and **Alex Wilber**, then select **Select**.
 
@@ -92,7 +92,7 @@ Each authentication method has its own targeting. Scoping passkeys to Engineerin
 
 1. On the **Include** tab, select **Add target** > **Select targets**. Select **Engineering**, and then select **Select**.
 
-1. In the **Engineering** row, open **Passkey profiles** and select **Default passkey profile**.
+1. In the **Engineering** row, select the **Passkey profiles** dropdown and select **Default passkey profile**.
 
 1. In the **All users** row, select the **Delete** icon. Only **Engineering** remains on the **Include** tab.
 
@@ -124,7 +124,7 @@ Password protection improves password quality and slows guessing attacks. SSPR c
 
 1. Set **Self service password reset enabled** to **Selected**.
 
-1. Under **Select group**, select the group link, select **Engineering**, and then choose **Select**.
+1. Under **Select group**, select the **No groups selected** link, select **Engineering**, and then choose **Select**.
 
 1. Select **Save**. Confirm the **Password reset policy saved** notification.
 
@@ -132,7 +132,7 @@ Password protection improves password quality and slows guessing attacks. SSPR c
 
 1. Set **Number of methods required to reset** to **1**.
 
-1. Under **Methods available to users**, make sure **Security questions** is cleared, and then select **Save**.
+1. Under **Methods available to users**, make sure **Security questions** is cleared, and then select **Save** if not already selected.
 
    > [!NOTE]
    > Security questions are retiring for SSPR in March 2027, so this lab doesn't use them. Email, Microsoft Authenticator, and other methods are controlled by the authentication methods policy. In this tenant, **Email OTP** is already enabled for all users. Administrator accounts always use a stricter two-method reset policy that you can't change.
