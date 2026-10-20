@@ -74,7 +74,7 @@ Full Access lets a delegate open and manage a shared mailbox, but not send from 
 
 1. Enter the following, then select **Create**:
    - **Display name:** `Training Support`
-   - **Email address:** `training-support`, with your assigned `.onmicrosoft.com` domain
+   - **Email address:** `training-support`, with your assigned `*.onmicrosoft.com` domain
 
 1. When the mailbox is created, close the pane. In the **Mailboxes** list, select **Training Support**, then select the **Delegation** tab.
 
