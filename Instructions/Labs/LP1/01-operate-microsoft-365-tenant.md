@@ -165,7 +165,7 @@ Your organization wants to license new hires through group membership instead of
    - **Last name:** `Vance`
    - **Display name:** `Adele Vance`
    - **Username:** `AdeleV`
-   - **Domains:** Select your `.onmicrosoft.com` domain
+   - **Domains:** Select your `*.onmicrosoft.com` domain
    - **Password settings:** Leave **Automatically create a password** selected
 
 1. Select **Next**.
