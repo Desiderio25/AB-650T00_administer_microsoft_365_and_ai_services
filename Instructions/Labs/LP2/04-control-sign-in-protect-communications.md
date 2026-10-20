@@ -147,7 +147,7 @@ Lynne needs an SSPR-eligible method before the report can show her as capable. Y
 
 1. Under **Manage**, select **Authentication methods**. Note that Lynne already has **Microsoft Authenticator** registered.
 
-1. Select **Add authentication method** on the toolbar. In **Choose method**, select **Email**.
+1. Select **+ Add authentication method** on the toolbar. In **Choose method**, select **Email**.
 
 1. In **Email address**, enter `MeganB@<yourtenant>.onmicrosoft.com`, and then select **Add**. You read the verification code in Megan's mailbox in Task 4.
 
@@ -163,6 +163,9 @@ The registration report can lag after a method or policy change. Use the live re
 
 1. Find the **Lynne Robbins** row. Confirm that **SSPR Registered** shows **Registered**, **SSPR Enabled** shows **Enabled**, **SSPR Capable** shows **Capable**, and **Methods Registered** lists **Email** and **Microsoft Authenticator**.
 
+   > [!NOTE]
+   > Some filters might not appear by default. If a required filter isn't displayed, select **Add filter**, search for and select the appropriate filter, and then select the required value.
+
 1. Find the **Alex Wilber** row. Confirm that **SSPR Enabled** shows **Enabled** while **SSPR Registered** shows **Not Registered** and **SSPR Capable** shows **Not Capable**. Alex is in scope but has no methods.
 
 1. If the report doesn't yet show Lynne's new state, check **Last Updated Time**, select **Refresh**, and wait a few minutes before checking again. Record the comparison only after the live report shows both rows.
@@ -177,7 +180,7 @@ The registration report can lag after a method or policy change. Use the live re
 
 1. Switch to **SEA-DEV2**, enter the code, and select **Next**.
 
-1. On **Create a new password**, enter and confirm a new password for Lynne Robbins, and then select **Finish**. Confirm that **Your password has been reset** appears.
+1. On **choose a new password** page, enter and confirm a new password for Lynne Robbins, and then select **Finish**. Confirm that **Your password has been reset** appears.
 
 1. Go to `https://outlook.office.com`, and sign in as Lynne Robbins with the new password to confirm the reset worked.
 
@@ -203,7 +206,7 @@ Report-only mode lets you evaluate a Conditional Access policy without enforcing
 
 1. On **SEA-DEV1**, in the Microsoft Entra admin center, select **Entra ID** > **Conditional Access** > **Policies**.
 
-1. On the toolbar, select **New policy**.
+1. On the toolbar, select **+ New policy**.
 
 1. In **Name**, enter `Finance - Require MFA and compliant device`.
 
@@ -217,9 +220,10 @@ Report-only mode lets you evaluate a Conditional Access policy without enforcing
 
 1. Under **Select specific resources**, select **None**. Search for `Office 365`, select **Office 365 SharePoint Online**, then select **Select**.
 
-    > **Note:** The wizard recommends targeting the **Office 365** app instead and warns that SharePoint Online also affects apps such as Microsoft Teams. Keep **Office 365 SharePoint Online** for this lab.
+   > [!NOTE]
+   > The wizard recommends targeting the **Office 365** app instead and warns that SharePoint Online also affects apps such as Microsoft Teams. Keep **Office 365 SharePoint Online** for this lab.
 
-1. Under **Conditions**, select **0 conditions selected**, then select **Client apps** > **Not configured**.
+1. Under **Conditions**, select **0 conditions selected**, then under **Client apps**, select **Not configured**.
 
 1. Set **Configure** to **Yes**. Clear **Exchange ActiveSync clients** and **Other clients** so that only **Browser** and **Mobile apps and desktop clients** remain selected, then select **Done**.
 
@@ -249,7 +253,7 @@ A sign-in with no visible prompt can still satisfy MFA through an existing claim
 
 1. Filter the logs for **Patti Fernandez** and the application **Office 365 SharePoint Online**.
 
-1. Open the matching sign-in event.
+1. Select the date link to open the matching sign-in event.
 
 1. Select the **Conditional Access** or **Report-only** tab.
 
@@ -269,7 +273,8 @@ What If estimates whether policies apply to the inputs you select. It doesn't ru
 
 1. Under **Identity**, confirm that **Users** is selected, then select **Edit user**. Search for and select **Patti Fernandez**, then select **Select**.
 
-1. Under **Target resource**, confirm that **Cloud apps** is selected, then select **Select cloud app**. Search for `Office 365`, select **Office 365 SharePoint Online**, then select **Select**.
+1. Under **Target resource**, confirm that **Cloud apps** is selected, then select **+
+2. Select cloud app**. Search for `Office 365`, select **Office 365 SharePoint Online**, then select **Select**.
 
 1. Under **Sign-in conditions**, set **Device platform** to **Windows**.
 
@@ -339,15 +344,15 @@ Preset security policies take precedence over custom policies for the same featu
 
 Defender for Office 365 policies can target only mail-enabled security groups or Microsoft 365 groups. The seeded **Finance Users** group is a security group without email, so you create **Finance Mail** with the same members.
 
-1. In a new tab, go to the Microsoft 365 admin center at `https://admin.microsoft.com`.
+1. In a new tab, go to the Microsoft 365 admin center at `https://admin.cloud.microsoft`.
 
 1. Select **Teams & groups** > **Active teams & groups**, then select the **Security groups** tab.
 
-1. Select **Add a mail-enabled security group**.
+1. Select **+ Add a mail-enabled security group**.
 
 1. In **Name**, enter `Finance Mail`, then select **Next**.
 
-1. Search for and select your administrator account as the owner, then select **Next**.
+1. Add your administrator account as the owner, then select **Next**.
 
 1. Add **Patti Fernandez** and **Nestor Wilke** as members, then select **Next**.
 
@@ -361,7 +366,7 @@ Defender for Office 365 policies can target only mail-enabled security groups or
 
 The default anti-spam policy moves spam and high confidence spam to Junk Email and quarantines phishing and high confidence phishing. For Finance, you quarantine high confidence spam too. For policy steps, see [Configure anti-spam policies in Microsoft Defender for Office 365](https://learn.microsoft.com/defender-office-365/anti-spam-policies-configure).
 
-1. In the Microsoft Defender portal, on **Anti-spam policies**, select **Create policy** > **Inbound**.
+1. In the Microsoft Defender portal, on **Anti-spam policies**, select **+ Create policy** > **Inbound**.
 
 1. In **Name**, enter `Finance inbound anti-spam`. In **Description**, enter `Finance inbound spam policy for AB-650 Lab 4`, then select **Next**.
 
@@ -385,7 +390,7 @@ The harmless supplier-verification mail in the tenant is context only. It isn't 
 
 1. Select **Threat policies** in the breadcrumb, then select **Anti-phishing**.
 
-1. Select **Create**.
+1. Select **+ Create**.
 
 1. In **Name**, enter `Finance supplier impersonation`, then select **Next**.
 
@@ -401,13 +406,13 @@ The harmless supplier-verification mail in the tenant is context only. It isn't 
 
 1. Select **Enable domains to protect**, then select **Include custom domains**.
 
-1. Select **Manage 0 custom domain(s)** > **Add domains**. In **Domain**, enter `woodgrovebank.com`, select the suggestion, then select **Add domains** > **Done**.
+1. Select **Manage 0 custom domain(s)** > **+ Add domains**. In **Domain**, enter `woodgrovebank.com`, select the suggestion, then select **Add domains** > **Done**.
 
 1. Confirm that **Enable mailbox intelligence (Recommended)** is selected, then select **Enable Intelligence for impersonation protection (Recommended)**. Select **Next**.
 
 1. On **Actions**, set **If a message is detected as user impersonation** to **Quarantine the message**, and in **Apply quarantine policy**, select **DefaultFullAccessPolicy**.
 
-1. Set **If a message is detected as domain impersonation** to **Quarantine the message** with **DefaultFullAccessPolicy**, then select **Next**.
+1. Set **If a message is detected as domain impersonation** to **Quarantine the message**. Under **Apply quarantine policy**, select **DefaultFullAccessPolicy**, and then select **Next**.
 
 1. On **Review**, confirm that user impersonation is **On for 1 user(s)** and domain impersonation includes **1 custom domain(s)**.
 
@@ -453,7 +458,7 @@ Safe Attachments for SharePoint, OneDrive, and Teams is a global setting that do
 
 The message, alert, incident, and automated investigation records in this exercise are sample evidence, not tenant records. You use the sample threat evidence to practice correlation and decision-making, then create a draft training campaign for lab-only recipients.
 
-**Roles used:** **Security Reader** to inspect Defender areas and **Attack Simulation Administrator** or **Security Administrator** to create a draft training campaign.
+**Roles used:** Security Reader to inspect Defender areas and Attack Simulation Administrator or Security Administrator to create a draft training campaign.
 
 ### Task 1: Interpret the sample message and incident evidence
 
@@ -508,25 +513,25 @@ A training campaign assigns learning. It doesn't require a phishing simulation a
 
 1. Select the **Settings** tab and note the **Training threshold** value. Leave it unchanged.
 
-1. Select the **Training** tab, then select **Create new**.
+1. Select the **Training** tab, then select **+ Create new**.
 
 1. In **Training name**, enter `Finance - phishing awareness follow-up`, then select **Next**.
 
-1. On **Target users**, leave **Include only specific users and groups** selected, then select **Add users**.
+1. On **Target users**, leave **Include only specific users and groups** selected, then select **+ Add users**.
 
 1. In **Search for Users or Groups**, enter `Finance` and press **Enter**. Select **Finance Mail**, then select **Add 1 User(s)**.
 
 1. Select **Next**. On the exclusion page, leave the exclusion check box cleared and select **Next**.
 
-1. On **Select training modules**, leave **Training catalog** selected and select **Add trainings**.
+1. On **Select training modules**, leave **Training catalog** selected and select **+ Add trainings**.
 
 1. Search for `phish`, select **Phishing — Six clues that should raise your suspicions**, select **Add**, then select **Next**.
 
-1. On **Select end user notification**, leave **Microsoft default notification (recommended)** selected.
+1. On **Select end user notification preferences for this campaign**, leave **Microsoft default notification (recommended)** selected.
 
 1. In the reminder row, set **Delivery preferences** to **Weekly**.
 
-1. Optional: Select the preview (eye) icon for a notification to review the message, then select **Close**. Select **Next**.
+1. Optional: Select the **View** (eye) icon for a notification to review the message, then select **Close**. Select **Next**.
 
 1. On **Schedule**, leave **Launch this training campaign as soon as I'm done** selected and clear **Send training with an end date**.
 
