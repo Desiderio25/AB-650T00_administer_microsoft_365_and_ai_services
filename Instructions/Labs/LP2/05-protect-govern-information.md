@@ -241,7 +241,8 @@ Sensitivity labels aren't available to users until you publish them in a label p
 
 1. Go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance`. Select **Settings** > **Site permissions** > **Add members** > **Add members to group**. Add **Patti Fernandez** as a **Member**, then save.
 
-1. On **SEA-DEV2**, open an InPrivate window, go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance/Shared%20Documents`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
+1. On **SEA-DEV2**, open an InPrivate window, go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance/Shared%20Documents`, and sign in as `
+<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
 
 1. Select **Contoso_Finance_Policy.docx** to open it in Word for the web.
 
@@ -262,6 +263,9 @@ Sensitivity labels aren't available to users until you publish them in a label p
 1. If the **Please sign in** dialog appears, select **Not now**
 
 1. Select **Lab5-Woodgrove-Transaction-Records.docx**. Confirm that the new tab shows **Sorry, you don't have permission to open this document** because the document is protected by a rights management service. The sharing grant doesn't override the label's encryption permissions.
+
+   > [!NOTE]
+   > If Alex can read the labeled file, record **Protected-access verification failed** and check encryption permissions and group membership. Include the date/time, close InPrivate, and continue with Exercise 2.
 
 1. Go to `https://m365.cloud.microsoft/chat`. Enter `Summarize Lab5-Woodgrove-Transaction-Records from the LAB2-Finance site.`, and press **Enter**. Confirm that Copilot can't find or summarize the document for Alex.
 
