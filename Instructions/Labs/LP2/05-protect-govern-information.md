@@ -239,7 +239,9 @@ Sensitivity labels aren't available to users until you publish them in a label p
 
    When more than one label policy applies to a user, the policy with the highest priority number provides that user's default label and policy settings.
 
-1. On **SEA-DEV2**, open an InPrivate window, go to `https://<yourtenant>.`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
+1. Go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance`. Select **Settings** > **Site permissions** > **Add members** > **Add members to group**. Add **Patti Fernandez** as a **Member**, then save.
+
+1. On **SEA-DEV2**, open an InPrivate window, go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance/Shared%20Documents`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
 
 1. Select **Contoso_Finance_Policy.docx** to open it in Word for the web.
 
@@ -251,11 +253,13 @@ Sensitivity labels aren't available to users until you publish them in a label p
 
    If the label isn't listed yet, record **Label availability pending** with the current date and time, close the InPrivate window, and continue with Exercise 2.
 
-1. Select **Copilot** at the lower right of the document. In **Message Copilot**, enter `Summarize this document in three bullets.`, and press **Enter**. Confirm that Copilot summarizes the document, because Patti is in the label's permissions group.
+1. Select **Copilot** at the lower right of the document. In the **Copilot** pane, enter `Summarize this document in three bullets.`, and press **Enter**. Confirm that Copilot summarizes the document, because Patti is in the label's permissions group.
 
-1. Select **Share** > **Share**. Enter `Alex Wilber`, select Alex, and then select **Send**. Confirm that **You've invited Alex Wilber to edit** appears, then close the InPrivate window.
+1. Select **File** > **Share** > **Share**. Enter `Alex Wilber`, select Alex, and then select **Send**. Confirm that **You've invited Alex Wilber to edit** appears, then close the InPrivate window.
 
 1. Open a new InPrivate window, go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance/Shared%20Documents`, and sign in as `AlexW@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster. Alex sees only the shared copy.
+
+1. If the **Please sign in** dialog appears, select **Not now**
 
 1. Select **Lab5-Woodgrove-Transaction-Records.docx**. Confirm that the new tab shows **Sorry, you don't have permission to open this document** because the document is protected by a rights management service. The sharing grant doesn't override the label's encryption permissions.
 
