@@ -132,7 +132,7 @@ Password protection improves password quality and slows guessing attacks. SSPR c
 
 1. Set **Number of methods required to reset** to **1**.
 
-1. Under **Methods available to users**, make sure **Security questions** is cleared, and then select **Save** if not already selected.
+1. Under **Methods available to users**, make sure **Security questions** is cleared. If you make a change, select **Save**.
 
    > [!NOTE]
    > Security questions are retiring for SSPR in March 2027, so this lab doesn't use them. Email, Microsoft Authenticator, and other methods are controlled by the authentication methods policy. In this tenant, **Email OTP** is already enabled for all users. Administrator accounts always use a stricter two-method reset policy that you can't change.
