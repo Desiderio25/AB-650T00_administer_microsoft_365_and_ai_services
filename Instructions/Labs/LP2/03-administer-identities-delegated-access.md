@@ -61,7 +61,7 @@ You keep the work you create in this lab. Later exercises and later labs build o
 
 A partner team hands you a file of five new hires to onboard. You validate the file, bulk-create the accounts with the least-privileged Microsoft Graph scope, add them to a security group, and verify each account by object ID. You then create a mail contact and a guest user so you can explain when to use each.
 
-**Roles used:** **Global Administrator**.
+**Roles used:** Global Administrator.
 
 ### Task 1: Validate the new-hire file
 
