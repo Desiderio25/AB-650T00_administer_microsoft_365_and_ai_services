@@ -339,8 +339,6 @@ An **eligible** assignment requires the user to activate the role before they ga
 
 1. Switch to **SEA-DEV2**. Open an InPrivate window, go to `https://entra.microsoft.com`, and sign in as `JoniS@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster. 
 
-1. If prompted to stay signed in, select **No**.
-
 1. If the **Let's keep your account secure** prompt appears, select **Next**, and then follow the on-screen instructions to set up the required authentication method.
 
 1. Select **ID Governance** > **Privileged Identity Management** > **My roles**. On the **Eligible assignments** tab, find **Message Center Reader**, then select **Activate**.
@@ -348,8 +346,6 @@ An **eligible** assignment requires the user to activate the role before they ga
 1. In **Reason**, enter `Review Microsoft 365 message center posts for upcoming service changes.` Leave **Duration (hours)** at `4`, then select **Activate**. Confirm that **Your activation request is scheduled** appears. The request now waits for approval.
 
 1. Close the InPrivate window. Open a new InPrivate window, go to `https://entra.microsoft.com`, and sign in as `LynneR@<yourtenant>.onmicrosoft.com`.
-
-1. If prompted to stay signed in, select **No**.
 
 1. If the **Let's keep your account secure** prompt appears, select **Next**, and then follow the on-screen instructions to set up the required authentication method.
 
