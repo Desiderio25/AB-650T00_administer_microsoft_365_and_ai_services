@@ -256,16 +256,19 @@ Sensitivity labels aren't available to users until you publish them in a label p
 
 1. Select **Copilot** at the lower right of the document. In the **Copilot** pane, enter `Summarize this document in three bullets.`, and press **Enter**. Confirm that Copilot summarizes the document, because Patti is in the label's permissions group.
 
-1. Select **File** > **Share** > **Share**. Enter `Alex Wilber`, select Alex, and then select **Send**. Confirm that **You've invited Alex Wilber to edit** appears, then close the InPrivate window.
+1. Select **File** > **Save As** > **Download a Copy**, and save the labeled document to **Downloads**.
+
+1. Close the document. In the **LAB2-Finance Documents library**, select **Create or upload** > **Files upload**, and upload the downloaded document.
+
+1. Select the uploaded document and confirm that Sensitivity shows **Woodgrove Confidential - Transaction Records**.
+
+1. Select **Share** > **Share**. Enter `Alex Wilber`, select Alex, and then select **Send**. Confirm that **You've invited Alex Wilber to edit** appears, then close the InPrivate window.
 
 1. Open a new InPrivate window, go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance/Shared%20Documents`, and sign in as `AlexW@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster. Alex sees only the shared copy.
 
 1. If the **Please sign in** dialog appears, select **Not now**
 
 1. Select **Lab5-Woodgrove-Transaction-Records.docx**. Confirm that the new tab shows **Sorry, you don't have permission to open this document** because the document is protected by a rights management service. The sharing grant doesn't override the label's encryption permissions.
-
-   > [!NOTE]
-   > If Alex can read the labeled file, record **Protected-access verification failed** and check encryption permissions and group membership. Include the date/time, close InPrivate, and continue with Exercise 2.
 
 1. Go to `https://m365.cloud.microsoft/chat`. Enter `Summarize Lab5-Woodgrove-Transaction-Records from the LAB2-Finance site.`, and press **Enter**. Confirm that Copilot can't find or summarize the document for Alex.
 
