@@ -80,9 +80,9 @@ Microsoft Entra Agent ID separates owners, who manage the identity, from sponsor
 
 1. On the **Overview** page, note the **Object ID** and the **Agent blueprint**, **Microsoft Copilot Studio agent identity blueprint**. This identity is the agent's Microsoft Entra Agent ID, not an Agent 365 request.
 
-1. Select **Owners and sponsors**. Select **Add** > **Add sponsor**, search for and select **Patti Fernandez**, and then choose **Select**.
+1. Select **Owners and sponsors**. Select **+ Add** > **Add sponsor**, search for and select **Patti Fernandez**, and then choose **Select**.
 
-1. Select **Add** > **Add owner**, search for and select **Nestor Wilke**, and then choose **Select**.
+1. Select **+ Add** > **Add owner**, search for and select **Nestor Wilke**, and then choose **Select**.
 
 1. Confirm that the list shows **Patti Fernandez** as **Sponsor** and **Nestor Wilke** as **Full owner**.
 
@@ -96,23 +96,23 @@ Microsoft Entra Agent ID separates owners, who manage the identity, from sponsor
 
 ### Task 2: Transfer sponsorship without orphaning the agent
 
-When a sponsor changes jobs, a lifecycle workflow can transfer their agent sponsorships to their manager so the agent is never left without an accountable person. For the task details, see [Agent sponsor tasks in Lifecycle Workflows](https://learn.microsoft.com/entra/id-governance/agent-sponsor-tasks).
+When a sponsor changes jobs, a lifecycle workflow can transfer their agent sponsorships to their manager so the agent is never left without an accountable person. For the task details, see [Agent identity sponsor tasks in Lifecycle Workflows](https://learn.microsoft.com/entra/id-governance/agent-sponsor-tasks).
 
-1. On **SEA-DEV1**, in the Microsoft Entra admin center, select **ID Governance** > **Lifecycle workflows** > **Create workflow**.
+1. On **SEA-DEV1**, in the Microsoft Entra admin center, select **ID Governance** > **Lifecycle workflows** > **+ Create workflow**.
 
 1. Select the **Agents** tab, and then select **Agent sponsor job profile change**.
 
-1. On **Basics**, enter the name `AB650 sponsor transfer`. Leave **Trigger type** as **Attribute changes** and **Trigger attribute** as **department**, and then select **Next: Configure scope**.
+1. On **Basics**, enter the name `AB650 sponsor transfer`. Leave **Trigger type** as **Attribute changes** and **Trigger attribute** as **department**, and then select **Next: Configure scope >**.
 
-1. In the rule, change the value from **Marketing** to `Executive Management`, and then select **Next: Review tasks**.
+1. In the **Rule** section, change the value from **Marketing** to `Executive Management`, and then select **Next: Review tasks >**.
 
 1. Select **Remove all access package assignments for user**, and then select **Disable**. Leave **Transfer agent sponsorships to manager** enabled.
 
-1. Select **Next: Review + create**, leave **Enable schedule** cleared, and then select **Create**.
+1. Select **Next: Review + create >**, leave **Enable schedule** cleared, and then select **Create**.
 
 1. In the workflow list, select **AB650 sponsor transfer**, and then select **Run on demand**.
 
-1. Select **Select users**, select **Patti Fernandez**, choose **Select**, and then select **Run workflow**.
+1. Select **+ Select users**, select **Patti Fernandez**, choose **Select**, and then select **Run workflow**.
 
 1. Select **Entra ID** > **Agents** > **Agent identities** > **AB650 Agent Governance Guide (Microsoft Copilot Studio)** > **Owners and sponsors**. Select **Refresh** until **Joni Sherman** replaces **Patti Fernandez** as **Sponsor**.
 
