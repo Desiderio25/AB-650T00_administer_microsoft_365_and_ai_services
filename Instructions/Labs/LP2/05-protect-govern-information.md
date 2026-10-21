@@ -65,7 +65,7 @@ You keep the work you create in this lab. Later exercises and later labs build o
 
 Finance transaction references need consistent classification before the organization can protect them. You create a custom SIT for a fictional transaction-reference format, test it against matching and near-miss samples, create an encrypted sensitivity label for item content, and publish the label to a test group.
 
-**Roles used:** Compliance Administrator or Information Protection Administrator, and Groups Administrator.
+**Roles used:** **Compliance Administrator** or **Information Protection Administrator**, and **Groups Administrator**.
 
 ### Task 1: Create a test group for label publishing
 
@@ -286,7 +286,7 @@ Sensitivity labels aren't available to users until you publish them in a label p
 
 A classification result becomes useful when other governance controls respond to it. You create a DLP policy in simulation mode for Microsoft 365 workloads, test it with a harmless file, publish a retention label for a separate item, inspect DSPM, and interpret a sample case that doesn't represent a live tenant incident.
 
-**Roles used:** Compliance Administrator or Data Loss Prevention Administrator.
+**Roles used:** **Compliance Administrator** or **Data Loss Prevention Administrator**.
 
 ### Task 1: Create a DLP policy in simulation mode
 
