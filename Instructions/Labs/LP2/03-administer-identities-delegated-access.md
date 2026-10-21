@@ -61,7 +61,7 @@ You keep the work you create in this lab. Later exercises and later labs build o
 
 A partner team hands you a file of five new hires to onboard. You validate the file, bulk-create the accounts with the least-privileged Microsoft Graph scope, add them to a security group, and verify each account by object ID. You then create a mail contact and a guest user so you can explain when to use each.
 
-**Roles used:** Global Administrator.
+**Roles used:** **Global Administrator**.
 
 ### Task 1: Validate the new-hire file
 
@@ -269,7 +269,7 @@ A **mail contact** routes mail to an external address and appears in the address
 
 An administrator's reach has two dimensions: *where* they can act and *when* they can act. You scope a helpdesk role to the new hires with an administrative unit, then prove the scope with one allowed and one denied password reset. You then configure an eligible role in PIM, run one activation through approval and deactivation, and correlate its audit trail.
 
-**Roles used:** Privileged Role Administrator (your administrator account), Helpdesk Administrator scoped to an administrative unit (Allan Deyoung), and Message Center Reader through PIM (Joni Sherman, approved by Lynne Robbins).
+**Roles used:** **Privileged Role Administrator** (your administrator account), **Helpdesk Administrator** scoped to an administrative unit (Allan Deyoung), and **Message Center Reader** through PIM (Joni Sherman, approved by Lynne Robbins).
 
 ### Task 1: Create an administrative unit and scope a role to it
 
