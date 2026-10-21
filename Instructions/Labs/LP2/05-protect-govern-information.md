@@ -286,7 +286,7 @@ Sensitivity labels aren't available to users until you publish them in a label p
 
 A classification result becomes useful when other governance controls respond to it. You create a DLP policy in simulation mode for Microsoft 365 workloads, test it with a harmless file, publish a retention label for a separate item, inspect DSPM, and interpret a sample case that doesn't represent a live tenant incident.
 
-**Roles used:** **Compliance Administrator** or **Data Loss Prevention Administrator**.
+**Roles used:** Compliance Administrator or Data Loss Prevention Administrator.
 
 ### Task 1: Create a DLP policy in simulation mode
 
@@ -294,7 +294,7 @@ Simulation mode records matches without enforcing policy actions. For more infor
 
 1. On **SEA-DEV1**, open the **Microsoft Purview portal** at `https://purview.microsoft.com`.
 
-1. Select **Solutions** > **Data Loss Prevention** > **Policies**, then select **Create policy**.
+1. Select **Solutions** > **Data Loss Prevention** > **Policies**, then select **+ Create policy**.
 
 1. On **What info do you want to protect?**, select **Enterprise applications & devices**.
 
@@ -310,17 +310,17 @@ Simulation mode records matches without enforcing policy actions. For more infor
 
 1. On **Define policy settings**, keep **Create or customize advanced DLP rules** selected, then select **Next**.
 
-1. Select **Create rule**. If a **Create compound conditions** tip appears, close it.
+1. Select **+ Create rule**. If a **Create compound conditions** tip appears, close it.
 
 1. In **Name**, enter `Detect Woodgrove transaction references`.
 
-1. Under **Conditions**, select **Add condition** > **Content is shared from Microsoft 365**, then change the dropdown to **with people outside my organization**.
+1. Under **Conditions**, select **+ Add condition** > **Content is shared from Microsoft 365**, then change the dropdown to **with people outside my organization**.
 
-1. Select **Add condition** > **Content contains**. Keep the operator between the two conditions set to **AND**.
+1. Select **+ Add condition** > **Content contains**. Keep the operator between the two conditions set to **AND**.
 
 1. In the **Content contains** group, select **Add** > **Sensitive info types**. Search for `Woodgrove`, press **Enter**, select **Woodgrove transaction reference**, and then select **Add**. Keep **High confidence** and an instance count of **1** to **Any**.
 
-1. Under **Actions**, select **Add an action** > **Restrict access or encrypt the content in Microsoft 365 locations**. Keep **Block users from receiving email, or accessing shared SharePoint, OneDrive, Teams files...** and select **Block only people outside your organization**.
+1. Under **Actions**, select **+ Add an action** > **Restrict access or encrypt the content in Microsoft 365 locations**. Keep **Block users from receiving email, or accessing shared SharePoint, OneDrive, Teams files...** and select **Block only people outside your organization**.
 
 1. Under **User notifications**, turn on notifications, then select **Notify users in Office 365 service with a policy tip or email notifications**. If a policy tips message appears, select **Got it**.
 
@@ -349,7 +349,7 @@ A simulation result can take time to appear. You record the live evidence if it 
 
 1. On **SEA-DEV2**, open an InPrivate window, go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance/Shared%20Documents`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
 
-1. Select **Create or upload** > **Word document**. The new document opens in a new tab.
+1. Select **+ Create or upload** > **Word document**. The new document opens in a new tab.
 
 1. In the document body, enter the following text:
 
@@ -360,9 +360,10 @@ A simulation result can take time to appear. You record the live evidence if it 
 
 1. Select the document name at the top of the window, enter `Lab5-DLP-Simulation-Test`, and press **Enter**.
 
-1. Select **Share** > **Share**, enter `external.recipient@fabrikam.com`, and press **Enter**. On **Share outside of your organization?**, select **Continue**.
+1. Select **Share** > **Share**, enter `external.recipient@fabrikam.com`, and press **Enter**. On **Share outside of your organization?** dialog, select **Continue**.
 
-   > **Note:** Fabrikam is a fictitious sample domain. Don't use a real customer's address.
+   > [!NOTE]
+   > Fabrikam is a fictitious sample domain. Don't use a real customer's address.
 
 1. Select **Send**, and confirm that the invitation is sent. The policy runs in simulation mode, so the share isn't blocked.
 
@@ -375,6 +376,9 @@ A simulation result can take time to appear. You record the live evidence if it 
 1. Select `Finance - transaction protection (simulation)`. In the details pane, review **Simulation progress**, then select **View simulation**.
 
 1. If **Welcome to simulation** appears, close it. Select **Items for review**, and confirm that `Lab5-DLP-Simulation-Test.docx` is listed with the rule **Detect Woodgrove transaction references** and the location **SharePoint**. Other sample files that contain a transaction reference might also be listed.
+
+   > [!NOTE] 
+   > If the file isn't listed, the simulation might still be processing. If it still doesn't appear, record **DLP simulation results pending** with the current date and time.
 
 1. In the **Data Loss Prevention** navigation, select **Explorers** > **Activity explorer**. Select **Activity: Any**, select **DLP rule matched**, and then select **Apply**.
 
@@ -390,7 +394,7 @@ Retention governs how long content is kept or when it's removed. Use a separate 
 
 1. On **SEA-DEV1**, in the **Microsoft Purview portal**, select **Solutions** > **Data Lifecycle Management** > **Retention labels**.
 
-1. Select **Create a label**.
+1. Select **+ Create a label**.
 
 1. In **Name**, enter `Finance transaction retention - test`. In **Description for users**, enter `Lab 5 retention label for a separate sample item`, and then select **Next**.
 
@@ -400,7 +404,8 @@ Retention governs how long content is kept or when it's removed. Use a separate 
 
 1. On **Choose what happens after the retention period**, select **Deactivate retention settings**, then select **Next**.
 
-   > **Note:** The default, **Delete items automatically**, would remove test content when the period ends. Don't keep it for this lab.
+   > [!NOTE]
+   > The default, **Delete items automatically**, would remove test content when the period ends. Don't keep it for this lab.
 
 1. Review the label, then select **Create label**.
 
@@ -412,7 +417,7 @@ Retention governs how long content is kept or when it's removed. Use a separate 
 
 1. On **Choose the type of retention policy to create**, select **Static**, then select **Next**.
 
-1. Select **Let me choose specific locations**. Turn off **Exchange mailboxes**, **SharePoint classic and communication sites**, and **OneDrive accounts**.
+1. On **Choose where to publish labels**, select **Let me choose specific locations**. Turn off **Exchange mailboxes**, **SharePoint classic and communication sites**, and **OneDrive accounts**.
 
 1. For **Microsoft 365 Group mailboxes & sites**, select **Edit** under **Included**, select **LAB2-Finance**, and then select **Done**. Select **Next**.
 
@@ -422,7 +427,9 @@ Retention governs how long content is kept or when it's removed. Use a separate 
 
 1. On **SEA-DEV2**, open an InPrivate window, go to `https://<yourtenant>.sharepoint.com/sites/LAB2-Finance/Shared%20Documents`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
 
-1. Select **Create or upload** > **Word document**. The new document opens in a new tab.
+1. If the **Please sign in** dialog appears, select **Sign in**.
+
+1. Select **+ Create or upload** > **Word document**. The new document opens in a new tab.
 
 1. In **Describe what you'd like to draft with Copilot**, enter the following prompt, then select the send arrow:
 
@@ -450,7 +457,8 @@ Data Security Posture Management (DSPM) combines data security posture and AI ac
 
 1. On **Complete setup to unlock the unified DSPM experience**, confirm that **Auditing and analytics** shows **Audit is on**. Leave **Collection policies for AI** unchanged, select **Start setup**, and then select **Close**.
 
-   > **Note:** The collection policies use Purview pay-as-you-go billing, which requires an Azure subscription linked to Purview. You don't need them in this lab. Interactions from Microsoft 365 Copilot, agents, and Copilot Studio are captured without these policies.
+   > [!NOTE]
+   > The collection policies use Purview pay-as-you-go billing, which requires an Azure subscription linked to Purview. You don't need them in this lab. Interactions from Microsoft 365 Copilot, agents, and Copilot Studio are captured without these policies.
 
 1. Select **Objectives**. In **Prevent data exposure in Microsoft 365 Copilot and Microsoft Copilot interactions**, record the number of interactions, user prompts, and Copilot responses with sensitive data.
 
