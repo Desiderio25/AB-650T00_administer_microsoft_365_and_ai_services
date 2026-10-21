@@ -67,7 +67,7 @@ You keep the work you create in this lab. Later exercises and later labs build o
 
 The security team wants passkeys and self-service password reset available only to a small engineering test group. You create the group, scope passkeys and SSPR to it, register Lynne Robbins for SSPR, compare Lynne with Alex Wilber in the registration report, and run a real reset as Lynne.
 
-**Roles used:** Authentication Policy Administrator and Privileged Authentication Administrator or equivalent administrator access to manage user authentication methods.
+**Roles used:** **Authentication Policy Administrator** and **Privileged Authentication Administrator** or equivalent administrator access to manage user authentication methods.
 
 ### Task 1: Create the Engineering group and scope passkeys
 
@@ -458,7 +458,7 @@ Safe Attachments for SharePoint, OneDrive, and Teams is a global setting that do
 
 The message, alert, incident, and automated investigation records in this exercise are sample evidence, not tenant records. You use the sample threat evidence to practice correlation and decision-making, then create a draft training campaign for lab-only recipients.
 
-**Roles used:** Security Reader to inspect Defender areas and Attack Simulation Administrator or Security Administrator to create a draft training campaign.
+**Roles used:** **Security Reader** to inspect Defender areas and **Attack Simulation Administrator** or **Security Administrator** to create a draft training campaign.
 
 ### Task 1: Interpret the sample message and incident evidence
 
