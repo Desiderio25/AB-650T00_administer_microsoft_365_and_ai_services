@@ -232,7 +232,7 @@ You confirm that one bad row fails on its own without discarding the rest of the
 
 A **mail contact** routes mail to an external address and appears in the address book, but it can't sign in. A **guest** is a business-to-business (B2B) identity that can sign in and be granted access.
 
-1. On **SEA-DEV1**, in Microsoft Edge, go to the **Microsoft 365 admin center** at `https://admin.cloud.microsoft`. Select **Users** > **Contacts**, then select **Add a contact**.
+1. On **SEA-DEV1**, in Microsoft Edge, go to the Microsoft 365 admin center at `https://admin.cloud.microsoft`. Select **Users** > **Contacts**, then select **Add a contact**.
 
 1. Enter the following, then select **Add**:
    - **Display name:** `Woodgrove Bank - AP Desk`
