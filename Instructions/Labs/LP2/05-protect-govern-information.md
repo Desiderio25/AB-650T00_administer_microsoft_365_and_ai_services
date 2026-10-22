@@ -71,7 +71,7 @@ Finance transaction references need consistent classification before the organiz
 
 A separate test group gives you a safe target for the label policy and the label's encryption permissions. Label policies and encryption permissions need a group with an email address, so you create a mail-enabled security group. Patti Fernandez represents a finance user who should receive the label.
 
-1. On **SEA-DEV1**, open the **Microsoft 365 admin center** at `https://admin.cloud.microsoft`.
+1. On **SEA-DEV1**, open the Microsoft 365 admin center at `https://admin.cloud.microsoft`.
 
 1. Select **Teams & groups** > **Active teams & groups**, then select the **Security groups** tab.
 
