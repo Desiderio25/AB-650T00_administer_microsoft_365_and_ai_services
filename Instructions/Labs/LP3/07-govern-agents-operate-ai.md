@@ -155,7 +155,7 @@ Conditional Access evaluates access-time conditions for agents separately from t
 
 1. Under **Users or agents**, select **0 users or agents selected** and change **What does this policy apply to?** to **Agents**. Select **Select agent identities**, and then, under **Select individual agents**, select **None**. Select **AB650 Agent Governance Guide**, and then choose **Select**.
 
-1. Under **Target resources**, select ****No target resources selected**, and then select **All resources (formerly 'All cloud apps')**.
+1. Under **Target resources**, select **No target resources selected**, and then select **All resources (formerly 'All cloud apps')**.
 
 1. Under **Conditions**, select **0 conditions selected**. Under **Agent risk (Preview)** select **Not configured**, set **Configure** to **Yes**, select **High**, and then select **Done**.
 
