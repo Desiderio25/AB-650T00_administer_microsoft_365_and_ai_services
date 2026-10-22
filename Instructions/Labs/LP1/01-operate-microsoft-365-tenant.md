@@ -66,7 +66,7 @@ Before your organization rolls out Microsoft 365 more widely, you set the tenant
 
 ### Task 1: Set the organization profile
 
-1. Go to the Microsoft 365 admin center at `https://admin.cloud.microsoft.
+1. Go to the Microsoft 365 admin center at `https://admin.cloud.microsoft`.
 
 1. If prompted to set up multifactor authentication (MFA), select **Set up now** and follow the on-screen instructions to register an authentication method before continuing. After completing the setup, continue with the sign-in process and authenticate when prompted.
 
