@@ -273,8 +273,7 @@ What If estimates whether policies apply to the inputs you select. It doesn't ru
 
 1. Under **Identity**, confirm that **Users** is selected, then select **Edit user**. Search for and select **Patti Fernandez**, then select **Select**.
 
-1. Under **Target resource**, confirm that **Cloud apps** is selected, then select **+
-2. Select cloud app**. Search for `Office 365`, select **Office 365 SharePoint Online**, then select **Select**.
+1. Under **Target resource**, confirm that **Cloud apps** is selected, then select **+ Select cloud app**. Search for `Office 365`, select **Office 365 SharePoint Online**, then select **Select**.
 
 1. Under **Sign-in conditions**, set **Device platform** to **Windows**.
 
