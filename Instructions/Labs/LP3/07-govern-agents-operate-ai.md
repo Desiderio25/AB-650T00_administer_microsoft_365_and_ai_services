@@ -131,7 +131,7 @@ Access packages give agent identities time-bound, auditable access. For the supp
 
 1. Open **Agent 365 - Finance Data Access**. Note that its catalog is **Agent 365 Governance**.
 
-1. Select **Assignments** > **New assignment**.
+1. Select **Assignments** > **+ New assignment**.
 
 1. In **Select policy**, select **Agent 365 - Finance Data Access - Auto Policy**.
 
@@ -151,15 +151,15 @@ Conditional Access evaluates access-time conditions for agents separately from t
 
 1. Open **CA: Block High-Risk Agent Identities**, and review its **State** and **Requirements for access**. Close the pane without changing the policy.
 
-1. Select **New policy**, and then enter the name `AB650 report-only agent identity review`.
+1. Select **+ New policy**, and then enter the name `AB650 report-only agent identity review`.
 
-1. Under **Users or agents**, change **What does this policy apply to?** to **Agents**. Select **Select agent identities**, select **Select individual agents**, select **AB650 Agent Governance Guide**, and then choose **Select**.
+1. Under **Users or agents**, select **0 users or agents selected** and change **What does this policy apply to?** to **Agents**. Select **Select agent identities**, and then, under **Select individual agents**, select **None**. Select **AB650 Agent Governance Guide**, and then choose **Select**.
 
-1. Under **Target resources**, select **All resources (formerly 'All cloud apps')**.
+1. Under **Target resources**, select ****No target resources selected**, and then select **All resources (formerly 'All cloud apps')**.
 
-1. Under **Conditions**, select **Agent risk (Preview)**, set **Configure** to **Yes**, select **High**, and then select **Done**.
+1. Under **Conditions**, select **0 conditions selected**. Under **Agent risk (Preview)** select **Not configured**, set **Configure** to **Yes**, select **High**, and then select **Done**.
 
-1. Under **Grant**, select **Block access**, and then choose **Select**.
+1. Under **Grant**, select **0 controls selected** select **Block access**, and then choose **Select**.
 
 1. Leave **Enable policy** set to **Report-only**, and then select **Create**.
 
@@ -186,13 +186,13 @@ Agent 365 curation controls which agents and tools become available in Microsoft
 
 Agent requests require admin review before they become available. For the documented flow, see [Manage agent requests in Microsoft 365 admin center](https://learn.microsoft.com/microsoft-365/admin/manage/agent-requests).
 
-1. On **SEA-DEV1**, open the Microsoft 365 admin center at `https://admin.microsoft.com`.
+1. On **SEA-DEV1**, open the Microsoft 365 admin center at `https://admin.cloud.microsoft`.
 
 1. Select **Agents** > **All agents**, and then select the **Requests** tab.
 
 1. Confirm that the six requests from Diego Siciliani show the state **Pending review** and the request type **Publish**. The requests include **Finance Insights Agent**, **IT Helpdesk Agent**, and **Legacy Ops Agent (Ownerless)**.
 
-1. Select **Finance Insights Agent**. Review the **Details**, **Data & tools**, **Security**, and **Permissions** tabs, and then select **Publish to store**.
+1. Select **Finance Insights Agent**. Review the **Details**, **Data & tools**, **Security**, and **Permissions** tabs. Then on the **Requests** tab, select **Publish to store**.
 
 1. On **Select users**, under **Select users or groups who can install the agent**, select **Specific users/groups**. Search for and select **Finance Users**.
 
@@ -206,9 +206,9 @@ Agent requests require admin review before they become available. For the docume
 
 1. Confirm that five requests remain and that **IT Helpdesk Agent** is still **Pending review**. Don't publish or reject it.
 
-1. Select the **Registry** tab, and search for `Finance Insights`. Confirm that two entries appear: the published copy with **Publisher type** set to **Your org**, and Diego's original copy.
+1. Select the **Registry** tab, and search for `Finance Insights`. Confirm that two entries appear: the published copy with **Publisher type** set to **Your org**, and Diego's original copy. If the **Publisher type** column isn't displayed, select **...** > **Customize view** > **Publisher type** > **Save**.
 
-1. Open the published copy, select the **Users** tab, and then select **Available to**. Confirm that **Specific users or groups** is set to **Finance Users**.
+1. Open the published copy by selecting the row, select the **Users** tab, and then select **Available to**. Confirm that **Specific users or groups** is selected and that **Finance Users** is listed under **Added users**.
 
 **You have successfully published one Pending request to a limited audience and kept another Pending.**
 
@@ -228,18 +228,18 @@ Tools such as MCP servers are approved separately from agents. A tool request st
 
 ### Task 3: Build and share an agent as a maker
 
-Users can build their own agents in Agent Builder and share them with specific people. These agents appear in the Registry without an admin publishing them. For sharing options, see [Agent Builder in Microsoft 365 Copilot](https://learn.microsoft.com/microsoft-365/copilot/extensibility/agent-builder).
+Users can build their own agents in Agent Builder and share them with specific people. These agents appear in the Registry without an admin publishing them. For sharing options, see [Agent Builder in Microsoft Copilot](https://learn.microsoft.com/microsoft-365/copilot/extensibility/agent-builder).
 
 1. On **SEA-DEV2**, open an InPrivate window, go to `https://m365.cloud.microsoft`, and sign in as `PattiF@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
 
-1. In the left pane, select **Agents**, and then select **New agent**. Select **Skip** to open the **Configure** tab. If **What's new in Agent Builder** appears, select **Get started**.
+1. In the left navigation pane, select **Agents**, and then select **New agent**. Select **Skip** to open the **Configure** tab. If **What's new in Agent Builder** appears, select **Get started**.
 
 1. Select the pencil icon next to **New Agent**, and enter the following values:
    - **Name:** `Finance Review Helper`
    - **Describe your agent:** `Answers questions about the finance review process.`
    - **Instructions:** `Answer questions about finance review steps. If you don't know, say so. Don't request or store personal data.`
 
-1. Don't add knowledge sources. Select **Create** (the **+** button). Confirm that **Your agent was created successfully!** appears and that the agent is **private**.
+1. Don't add knowledge sources. Select **Create**. Confirm that **Your agent was created successfully!** appears and that the agent is **private**.
 
 1. Select **Share**. Confirm that **Org-wide sharing for chat access** is off.
 
@@ -273,7 +273,7 @@ The Agent Registry provides a centralized view of agents available in the organi
 
 1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Agents** > **All agents** > **Registry**.
 
-1. Search for `Finance Insights`, and open the copy whose **Publisher type** is **Your org**.
+1. Search for `Finance Insights`,  locate the copy whose **Publisher type** is **Your org**, and the select the row to open it.
 
 1. On the **Details** tab, record **Publisher**, **Publisher type**, **Owner**, **Created by**, **Last used**, and **Entra agent ID**.
 
@@ -283,11 +283,11 @@ The Agent Registry provides a centralized view of agents available in the organi
 
 ### Task 2: Assign an owner to an agent without one
 
-An agent without an owner has no one to maintain, update, or retire it. Agent 365 ownership is separate from the Microsoft Entra Agent ID owner you set in Exercise 1. For ownership actions, see [Governance and lifecycle actions for agents](https://learn.microsoft.com/microsoft-365/admin/manage/agent-actions).
+An agent without an owner has no one to maintain, update, or retire it. Agent 365 ownership is separate from the Microsoft Entra Agent ID owner you set in Exercise 1. For ownership actions, see [Governance and lifecycle actions for agents available in Microsoft 365 admin center](https://learn.microsoft.com/microsoft-365/admin/manage/agent-actions).
 
-1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Agents** > **All agents** > **Map**. Record the **Total agents**, **Agents at risk**, and **Agents without owners** cards. If a card shows **Failed to load** or a dash, record it as unavailable rather than zero.
+1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Agents** > **Agent map**. Record the **Total agents**, **Agents at risk**, and **Agents without owners** cards. If a card shows **Failed to load** or a dash, record it as unavailable rather than zero.
 
-1. Select the **Registry** tab, search for `Legacy Ops`, and open **Legacy Ops Agent (Ownerless)**. Confirm that **Owner** is populated. Despite its name, this agent has an owner. Close the pane.
+1. Select **Agents** > **All agents**. Select the **Registry** tab, search for `Legacy Ops`, and open **Legacy Ops Agent (Ownerless)**. Confirm that **Owner** is populated. Despite its name, this agent has an owner. Close the pane.
 
 1. Search for `AB650 Agent Governance`, and open **AB650 Agent Governance Guide**. Confirm that **Owner** and **Created by** show a dash, while **Entra agent ID** is populated.
 
@@ -326,11 +326,12 @@ Agent availability and installation are separate settings. Review both before yo
 
 1. Select **Available to**. If **Specific users or groups** isn't set to **Finance Users**, select it, add **Finance Users**, and then select **Save**. Close the pane.
 
-1. Search for `Finance Review Helper`, open it, and select the **Users** tab. Confirm the message **Shared agents can't be automatically installed** and that only the agent's owner can share it. Close the pane.
+1. Search for `Finance Review Helper`, open it, and select the **Users** tab. Confirm that the message **Shared agents can't be automatically installed** appears and that only the agent's owner can share the agent. Close the pane.
 
 1. Select **Agents** > **Settings** > **Sharing**. Record the value of **Choose who can share agents with anyone in the organization**. This setting controls whether makers like Patti can turn on **Org-wide sharing for chat access**. Close the pane without changing it.
 
-1. Confirm that changing Registry availability doesn't change underlying file or application permissions.
+> [!NOTE]
+> Changing an agent´s Registry availability doesn't change underlying file or application permissions.
 
 **You have successfully verified agent availability and sharing scope.**
 
@@ -348,7 +349,7 @@ AI operations combines live usage and health evidence. You read live Copilot and
 
 ### Task 1: Read Copilot and agent usage
 
-Microsoft 365 admin center usage reports show Copilot adoption and agent usage. Reports can take up to 48 hours to populate. For the report path, see [Microsoft 365 Copilot usage report](https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage).
+Microsoft 365 admin center usage reports show Copilot adoption and agent usage. Reports can take up to 48 hours to populate. For the report path, see [Microsoft Copilot usage report](https://learn.microsoft.com/microsoft-365/admin/activity-reports/microsoft-365-copilot-usage).
 
 1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Reports** > **Usage**. If **Reports** isn't visible, select **Show all** first.
 
