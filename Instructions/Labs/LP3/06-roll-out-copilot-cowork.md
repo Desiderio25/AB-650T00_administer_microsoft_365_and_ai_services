@@ -385,7 +385,7 @@ Patti presents customer rollout at next week's exec review. You ask Cowork to bu
 1. Select **Cowork** at the top of the left pane. Confirm that **Great news! You have access to Cowork** appears.
 
    > [!NOTE]
-   > If the **Great news! You have access to Cowork** message doesn´t appear, select **Request sent**. On **SEA-DEV1**, go to the **Microsoft 365 Admin Center**, then select **Copilot** > **Cowork**. Confirm that the pending request for **Patti Fernandez** appears, and then select **Go to users**. Select the checkbox next to **Patti Fernandez**, select **Resolve request**, select  **Approve request** and **cowork.pilot-finance** group . Then select **Assign to group**.
+   > If the **Great news! You have access to Cowork** message doesn´t appear, select **Request sent**. On **SEA-DEV1**, go to the **Microsoft 365 Admin Center**, then select **Copilot** > **Cowork**. Confirm that the pending request for **Patti Fernandez** appears, and then select **Go to users**. Select the checkbox next to **Patti Fernandez**, select **Resolve request**, select  **Approve request** and **cowork-pilot-finance** group . Then select **Assign to group**.
 
 1. In **Start a task**, enter this task, then press **Enter**:
 
