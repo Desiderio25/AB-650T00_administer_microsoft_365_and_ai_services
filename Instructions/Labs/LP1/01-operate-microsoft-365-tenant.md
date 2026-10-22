@@ -66,7 +66,7 @@ Before your organization rolls out Microsoft 365 more widely, you set the tenant
 
 ### Task 1: Set the organization profile
 
-1. Go to the **Microsoft 365 admin center** at `https://admin.cloud.microsoft.
+1. Go to the Microsoft 365 admin center at `https://admin.cloud.microsoft.
 
 1. If prompted to set up multifactor authentication (MFA), select **Set up now** and follow the on-screen instructions to register an authentication method before continuing. After completing the setup, continue with the sign-in process and authenticate when prompted.
 
@@ -156,7 +156,7 @@ Your organization wants to license new hires through group membership instead of
 
 ### Task 1: Create two unlicensed users
 
-1. In the **Microsoft 365 admin center** at `https://admin.cloud.microsoft`, select **Users** > **Active users**.
+1. In the Microsoft 365 admin center at `https://admin.cloud.microsoft`, select **Users** > **Active users**.
 
 1. Select **Add a user**.
 
@@ -214,7 +214,7 @@ Your organization wants to license new hires through group membership instead of
 
 ### Task 3: Assign E7 to the direct group
 
-1. In the **Microsoft 365 admin center**, select **Billing** > **Licenses**.
+1. In the Microsoft 365 admin center, select **Billing** > **Licenses**.
 
 1. Select **Microsoft 365 E7 (No Teams)**. Note the number of assigned licenses.
 
@@ -277,7 +277,7 @@ Users report that Copilot and Teams "are down." Before you escalate, you determi
 
 ### Task 1: Review service health and configure an email notification
 
-1. On **SEA-DEV1**, in the **Microsoft 365 admin center**, select **Health** > **Service health**.
+1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Health** > **Service health**.
 
 1. On the **Overview** tab, review the service list and any active issues.
 
@@ -295,7 +295,7 @@ Users report that Copilot and Teams "are down." Before you escalate, you determi
 
 ### Task 2: Run the network connectivity test from two clients
 
-1. On **SEA-DEV1**, in the **Microsoft 365 admin center**, select **Health** > **Network connectivity**.
+1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Health** > **Network connectivity**.
 
    > [!NOTE]
    > An empty **Overview** means the tenant doesn't have enough location telemetry yet. It doesn't mean the network is healthy.
@@ -327,7 +327,7 @@ Users report that Copilot and Teams "are down." Before you escalate, you determi
 
 ### Task 3: Inspect the Microsoft 365 Backup setup prerequisites
 
-1. On **SEA-DEV1**, in the **Microsoft 365 admin center**, select **Show all** > **Settings** > **Microsoft 365 Backup**.
+1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Show all** > **Settings** > **Microsoft 365 Backup**.
 
 1. Review the three setup steps: **Things to know before you start**, **Connect a billing policy**, and **Start backing up your data**.
 
