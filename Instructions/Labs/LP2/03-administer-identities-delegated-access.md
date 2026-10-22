@@ -255,7 +255,7 @@ A **mail contact** routes mail to an external address and appears in the address
 
 1. In **All users**, search for `Lab 3 Guest`, then select it. On the **Overview** tab, confirm that **User type** is **Guest** and that the B2B invitation shows **Pending acceptance**.
 
-1. (Optional) To see a guest redeem an invitation, repeat steps 5–7 with an external Microsoft account that you control and **Send invite message** selected. On **SEA-DEV2**, open an InPrivate window, go to `outlook.cloud.microsoft`, and sign in with external Microsoft account. In the invitation email, select **Accept invitation**, sign in with that account, and select **Accept**. On **SEA-DEV1**, refresh the guest's **Overview** and confirm that the invitation shows **Accepted**. When you finish, delete that guest so no personal account stays in the lab tenant.
+1. (Optional) To see a guest redeem an invitation, repeat steps 5–7 with an external Microsoft account that you control and **Send invite message** selected. On **SEA-DEV2**, open an InPrivate window, go to `https://outlook.office.com`, and sign in with external Microsoft account. In the invitation email, select **Accept invitation**, sign in with that account, and select **Accept**. On **SEA-DEV1**, refresh the guest's **Overview** and confirm that the invitation shows **Accepted**. When you finish, delete that guest so no personal account stays in the lab tenant.
 
 **You have successfully created a mail contact and a guest user.**
 
