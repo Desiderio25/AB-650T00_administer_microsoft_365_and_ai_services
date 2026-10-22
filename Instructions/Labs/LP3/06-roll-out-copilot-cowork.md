@@ -73,7 +73,7 @@ A small rollout wave is ready only when the license, readiness, and data-access 
 
 Use readiness and access evidence together. A license doesn't prove that the user's content boundary is safe.
 
-1. On **SEA-DEV1**, in Microsoft Edge, go to the **Microsoft 365 admin center** at `https://admin.cloud.microsoft` and sign in with your administrator account.
+1. On **SEA-DEV1**, in Microsoft Edge, go to the Microsoft 365 admin center at `https://admin.cloud.microsoft` and sign in with your administrator account.
 
 1. Select **Reports** > **Usage**. If **Reports** doesn't appear, select **Show all** first.
 
