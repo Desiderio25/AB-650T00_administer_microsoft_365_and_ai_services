@@ -82,7 +82,7 @@ Full Access lets a delegate open and manage a shared mailbox, but not send from 
 
 1. Next to **Send as**, select **Edit**. Select **+ Add members**, select **Diego Siciliani**, select **Save**, then select **Confirm**. Don't add **Send on behalf**, which shows the delegate's name in **From**. For more information, see [Manage permissions for recipients](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-permissions-for-recipients).
 
-1. Close the pane. In the **Microsoft 365 admin center** at `https://admin.cloud.microsoft`, select **Users** > **Active users**, then select **Training Support**. Confirm that the account shows **Sign-in blocked**. Delegates reach the mailbox through their own accounts.
+1. Close the pane. In the Microsoft 365 admin center at `https://admin.cloud.microsoft`, select **Users** > **Active users**, then select **Training Support**. Confirm that the account shows **Sign-in blocked**. Delegates reach the mailbox through their own accounts.
 
 1. Switch to **SEA-DEV2**. In Microsoft Edge, open an InPrivate window (**Ctrl+Shift+N**), go to `https://outlook.office.com`, and sign in as `DiegoS@<yourtenant>.onmicrosoft.com` with the user password provided by your lab hoster.
 
@@ -135,7 +135,7 @@ A private channel gives a subset of a team its own workstream and its own ShareP
 
 1. Next to **Negotiation**, select **More channel options (...)** > **Manage channel**. On the **Members** tab, expand **Members and guests**. Next to **Isaiah Langer**, change **Channel role** to **Owner**.
 
-1. In the **Microsoft 365 admin center**, select **Show all** > **SharePoint**. In the **SharePoint admin center**, select **Sites** > **Active sites**.
+1. In the Microsoft 365 admin center, select **Show all** > **SharePoint**. In the **SharePoint admin center**, select **Sites** > **Active sites**.
 
 1. Search for `DealRoom`. In the **Channel sites** column for **DealRoom**, select **1 site**. Record the channel site name, **DealRoom-Negotiation**, and its type, **Private channel**.
 
