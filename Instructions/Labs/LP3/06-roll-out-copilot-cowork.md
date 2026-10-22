@@ -98,7 +98,7 @@ Use readiness and access evidence together. A license doesn't prove that the use
 
 ### Task 2: Gate the rollout group
 
-The rollout group is the visible gate for the first wave. Membership must match the readiness decision you made in Task 1.
+The rollout group records the approved members of the first wave. Membership must match the readiness decision you made in Task 1. Group membership alone doesn't grant or restrict Microsoft Copilot access.
 
 1. On **SEA-DEV1**, in the Microsoft 365 admin center, select **Teams & groups** > **Active teams & groups**.
 
