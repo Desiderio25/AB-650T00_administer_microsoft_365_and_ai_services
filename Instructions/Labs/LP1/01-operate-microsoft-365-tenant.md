@@ -60,7 +60,7 @@ You keep the work you create in this lab. Later exercises and later labs build o
 
 ### Scenario
 
-Before your organization rolls out Microsoft 365 more widely, you set the tenant baseline. You update the organization profile and sold-to address, apply the company theme, and confirm that usage reports conceal user names. You then review a DNS record set for a planned custom domain and find the record that would break outbound mail.
+Before your organization rolls out Microsoft 365 more widely, you set the tenant baseline. You update the technical contact, review and attempt to update the sold-to address, apply the company theme, and confirm that usage reports conceal user names. You then review a DNS record set for a planned custom domain and find the record that would break outbound mail.
 
 **Roles used:** **Global Administrator**.
 
@@ -85,9 +85,12 @@ Before your organization rolls out Microsoft 365 more widely, you set the tenant
    - **Zip:** `98052`
    - **Email:** Your administrator account
 
-1. Select **Save**.
+1. Select **Save**. If the save succeeds, refresh the billing account page and confirm that **Sold to address** shows the values you entered.
 
-**You have successfully set the organization profile and sold-to address.**
+> [!IMPORTANT]
+> If saving fails with **“Something failed on our end. Try again later.”**, the sold-to address hasn't been updated. Close the **Edit sold-to address** pane without saving and leave the existing billing address unchanged. Continue with **Task 2**; the remaining lab tasks don't depend on this address change.
+
+**You have successfully set the technical contact and reviewed the sold-to address. If saving succeeded, you have also updated the address.**
 
 ### Task 2: Apply the company theme and conceal report names
 
